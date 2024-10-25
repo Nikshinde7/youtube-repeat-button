@@ -15,9 +15,9 @@
         const repeatBtnExists = document.getElementById('repeat-btn');
 
         if(!repeatBtnExists) {
-
             const repeatBtn = document.createElement("img");
 
+            // We will need a parent container with which we can control the alignment of the repeat button
             const repeatBtnContainer = document.createElement('button');
             repeatBtnContainer.id = 'repeat-btn-container';
             repeatBtnContainer.className = 'ytp-button';
@@ -40,6 +40,8 @@
     }
 
     const repeatVideo = () => {
-        // Do something
+        youtubePlayer.loop = true;
     }
+
+    newVideoLoaded();
 })()
